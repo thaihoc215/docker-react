@@ -1,26 +1,8 @@
-version: '3'
+version: "3"
 services:
   web:
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     ports:
-      - '3000:3000'
-    volumes:
-      - /app/node_modules
-      - .:/app
-  
-#solution 1: attach to the exising container that is created => can execute commands inside this container (by usin bash/zsh command tool)
-
-#solution 2: create second service and use to run the tests
-  tests:
-    #allown input from keyboard
-    stdin_open: true
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    volumes:
-      - /app/node_modules
-      - .:/app
-      #override the command instead of npm run start
-    command: ["npm", "run", "test"]
+      - "80:80"
