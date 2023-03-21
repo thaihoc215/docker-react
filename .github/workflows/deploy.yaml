@@ -23,11 +23,12 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
           application_name: docker
           environment_name: Docker-env
-          existing_bucket_name: elasticbeanstalk-us-east-1-923445559289
+          existing_bucket_name: elasticbeanstalk-us-east-1-748868261989
           region: us-east-1
           version_label: ${{ github.sha }}
           deployment_package: deploy.zip
 
 
           # Docker-env.eba-k9cfwn5c.us-east-1.elasticbeanstalk.com
+          # elasticbeanstalk-us-east-1-748868261989
           # https://s3.console.aws.amazon.com/s3/buckets?region=us-east-1
